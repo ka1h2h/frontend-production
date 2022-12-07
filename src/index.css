@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'icons';
+    src:
+      url('./../public/fonts/icons.woff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+/* ========================== Обнуление стилей ========================== */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0; }
+  
+  *, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  
+  :focus, :active {
+    outline: none; }
+  
+  a:focus, a:active {
+    outline: none; }
+  
+  nav, footer, header, aside {
+    display: block; }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; }
+  
+  input, button, textarea {
+    font-family: inherit; }
+  
+  input::-ms-clear {
+    display: none; }
+  
+  button {
+    cursor: pointer; }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0; }
+  
+  a, a:visited {
+    text-decoration: none; }
+  
+  a:hover {
+    text-decoration: none; }
+  
+  ul li {
+    list-style: none; }
+  
+  img {
+    vertical-align: top; }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit; }
+  
+/* ==========================  ========================== */
+
+.chat {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(67, 165, 247, 0.51) 0%, rgba(18, 53, 151, 0.45) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.chat__window {
+    margin: 0 auto;
+    width: 1525px;
+    height: 858px;
+    background: #1E1D1D;
+    
+    
+}
+
+.header {
+  
+}
+.header__container {
+    height: 50px;
+    border-bottom: 0.423704px solid rgba(215, 211, 211, 0.49);
+    display: flex; 
+    align-items: center;
+    padding: 0px 25px 0px 25px;
+}
+
+
+.header__logo {
+    flex: 1 1 auto;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #E8E8E8;
+}
+
+.header__search {
+    width: 32.45%;
+    position: relative;
+    height: 34px;
+}
+
+.header__search-inpt {
+    height: 100%;
+    width: 100%;
+    background: #E9E7E7;
+    border-radius: 4.23704px;
+    padding-left: 25px;
+}
+
+
+.users {
+    height: 100%;
+}
+
+.users__container {
+    max-width: 412px;
+    height: 100%;
+    padding: 20px 20px 0px 20px;
+    border-right: 0.423704px solid rgba(215, 211, 211, 0.49);
+    
+    
+}
+
+.users__info-container {
+    display: flex;
+    margin-bottom: 32px;
+    
+}
+
+.users__title {
+    flex: 1 1 auto;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    line-height: 25 / 20 * 100%;
+    color: #D7D3D3;
+}
+
+
+
+.users__search {
+    font-family: 'icons';
+    font-size: 20px;
+    display: flex;
+}
+
+
+
+
+
+/* ========================== Иконки ========================== */
+  
+
+  
+  ._icon-1:before {
+    content: "\e900";
+    color: #adaeaf;
+  }
+  ._icon-Vector-2:before {
+    content: "\e901";
+    color: #adaeaf;
+  }
+  ._icon-uniE902:before {
+    content: "\e902";
+    color: #d7d3d3;
+  }
+  
+
+  /* ==========================  ========================== */
+
+.user-message {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+}
+
+.message {
+ 
+}
+
+  .users-list-title {
+    font-weight: 400;
+    font-size: 18.8296px;
+    line-height: 21 / 18 * 100%;
+    color: #D7D3D3;
+    margin-bottom: 17px;
+  }
+
+  .message__sender {
+
+  }
+
+  .message__text {
+
+  }
+
+  .message__time-message {
+
+  }

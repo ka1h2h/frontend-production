@@ -58,6 +58,18 @@ plugins: [
                 },
             ],
         },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
+          loader: 'file-loader',
+          options: {
+          outputPath: 'images'
+        }
+        },
+        {
+          test: /\.(woff|woff2|eot|ttf|otf)$/i,
+          type: 'asset/resource',
+        },
           {
             test: /\.tsx?$/,
             use: 'ts-loader',
