@@ -1,0 +1,35 @@
+.header {
+  
+}
+.header__container {
+    height: 50px;
+    width: 1046px;
+    border-bottom: 0.423704px solid rgba(215, 211, 211, 0.49);
+    display: flex; 
+    align-items: center;
+    padding: 0px 25px 0px 25px;
+}
+
+
+.header__logo {
+    flex: 1 1 auto;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #E8E8E8;
+}
+
+.header__search {
+    width: 32.45%;
+    position: relative;
+    height: 34px;
+}
+
+.header__search-inpt {
+    height: 100%;
+    width: 100%;
+    background: #E9E7E7;
+    border-radius: 4.23704px;
+    padding-left: 25px;
+}

@@ -1,64 +1,58 @@
+import { SetStateAction, useEffect, useState } from 'react'
+import Chat from './chat/Chat'
+import Header from './header/header'
 import './index.css'
-import avatar from './avatar.png'
+
+// interface IProps_Square {
+//   name: string;
+//   onClick: React.MouseEventHandler<HTMLButtonElement>;
+//   setName: React.Dispatch<SetStateAction<string>>
+// }
+
+const App:React.FC= () => {
 
 
-function App() {
+const [nameText, setNameText] = useState('')
+const [name, setName] = useState(nameText)
+const [welcomeBanner, setWelcomeBanner] = useState(true)
+
+const addName = ():void => {
+  if (nameText !== '' &&  nameText !== undefined) {
+    setName(nameText);
+    setWelcomeBanner(false)
+    sessionStorage.setItem('user', JSON.stringify(nameText)) 
+  }
+};
+
+
+      useEffect(() => {
+        const userName:any = sessionStorage.getItem('user')
+        setName(JSON.parse(userName))
+        let session = sessionStorage.getItem('user')
+          if (session !== null) {
+            setWelcomeBanner(false)
+          }
+      }, [])
+     
+
+     
+
   return (
+
     <div className="chat">
       <div className="chat__window">
-       <div className="header">
-        <div className="header__container">
-          <div className="header__logo">
-            Frontend-Production
-          </div>
-          <div className="header__search">
-          <input className='header__search-inpt' placeholder='Search or type a command'/>
-          </div>
-        </div>
-       </div>
-
-      <div className="users">
-        <div className="users__container">
-        <div className="users__info-container">
-        <div className="users__title">
-          Chat
-        </div>
-        <div className="users__search">
-          <a className="_icon-uniE902" href="#"></a>
-        </div>
-        </div>
-        <div className="users-list">
-        <div className="users-list__container">
-          <div className="users-list-title">
-            Pinned
-          </div>
-          <div className="user-message">
-            <div className="user__avatar-container">
-                <div className="user__avatar">
-                  <img src={avatar} className="user__avatar" />
-                </div>
-            </div>
-            <div className="message">
-              <div className="message__sender">
-              Annushka Mehta
-              </div>
-            <div className="message__text">
-            Hey, let’s catchup tomorrow!
-                </div>
-            </div>
-            
-            <div className="message__time-message">
-            2:25 PM
-            </div>
-          </div>
-        </div>
+      <Header />
+      <Chat name={name}/>
       </div>
+      <div className={welcomeBanner ? 'asq-your-name' : 'completed'}>
+        <div className="asq-your-name__form">
+        <div className="asq-your-name__form__container">
+          <div className='asq-your-name__name'>Как Вас зовут?</div>
+          <input value={nameText} onChange={event => setNameText(event.target.value)}  className='asq-you-name__input' placeholder='Введите Ваше имя' />
+          <button className='asq-your-name__btn' onClick={addName}>Сохранить</button>
+          </div>
         </div>
-      </div>
-   
-
-
-      </div>
+    </div>
     </div>
   )
 }

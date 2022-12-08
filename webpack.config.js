@@ -12,13 +12,14 @@ console.log(mode + " mode")
 
 module.exports = {
   entry: './src/index.tsx',
-  devtool: 'source-map',
+
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: "assets/[hash][ext][query]",
   },
   devServer: {
     port: 3000,
@@ -29,11 +30,8 @@ plugins: [
         filename: './css/style.css',
     }),
     new HtmlWebpackPlugin({
-        template: "./dist/index.html",
-        minify : {
-          removeComments: true
-        }
-    })],
+        template: "./dist/index.html"
+          })],
     module: {
         rules: [
           {
@@ -60,11 +58,7 @@ plugins: [
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
-          type: 'asset/resource',
-          loader: 'file-loader',
-          options: {
-          outputPath: 'images'
-        }
+          type: 'asset/resource'
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
