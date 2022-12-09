@@ -1,25 +1,25 @@
-import { SetStateAction, useState, useEffect } from 'react'
-import './textarea.css'
+import { useState } from "react";
+import "./textarea.css";
 
-
-interface Message {
-    addMessage: (event: React.KeyboardEvent<HTMLElement>) => void,
-    messageText: string,
-    setMessageText: React.Dispatch<SetStateAction<string>>,
+interface TextAreaProps {
+  sendMessage: (message: string) => void;
 }
 
-const TextArea: React.FC<Message> = ({messageText, addMessage, setMessageText}) => {
-   
+export const TextArea: React.FC<TextAreaProps> = ({ sendMessage }) => {
+  const [messageText, setMessageText] = useState("");
   return (
     <div className="text-area">
-    <textarea className='text-area__container' value={messageText}
-     onChange={event => setMessageText(event.target.value)} 
-     onKeyPress={addMessage}
-     >
-     </textarea>
-    
-  </div>
-  )
-}
-
-export default TextArea
+      <textarea
+        className="text-area__container"
+        value={messageText}
+        onChange={(event) => setMessageText(event.target.value)}
+        onKeyUp={(event) => {
+          if (event.key === "Enter") {
+            sendMessage(messageText);
+            setMessageText("");
+          }
+        }}
+      ></textarea>
+    </div>
+  );
+};
