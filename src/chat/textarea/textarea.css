@@ -18,3 +18,9 @@
       line-height: calc(18 / 14 * 100%);
       color: rgba(236, 236, 236, 0.904);
     }
+@media (max-width: 1125px) {
+  .text-area {
+    max-height: 30%;
+  }
+}
+ 

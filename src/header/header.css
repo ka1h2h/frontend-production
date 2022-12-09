@@ -15,21 +15,17 @@
     flex: 1 1 auto;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 23px;
     line-height: 30px;
     color: #E8E8E8;
 }
 
-.header__search {
-    width: 32.45%;
-    position: relative;
-    height: 34px;
-}
 
-.header__search-inpt {
-    height: 100%;
-    width: 100%;
-    background: #E9E7E7;
-    border-radius: 4.23704px;
-    padding-left: 25px;
+@media (max-width: 1025px) {
+    .header__container {
+        max-width: 100%;
+    }  
+    .header__logo {
+        text-align: center;   
+    }
 }

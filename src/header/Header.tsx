@@ -7,9 +7,6 @@ function Header() {
       <div className="header__logo">
         Frontend-Production
       </div>
-      <div className="header__search">
-      <input className='header__search-inpt' placeholder='Search or type a command'/>
-      </div>
     </div>
    </div>
   )
