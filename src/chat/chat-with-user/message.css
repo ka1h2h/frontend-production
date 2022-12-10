@@ -1,28 +1,27 @@
-
 .message__container {
-    max-width: 650px;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  max-width: 650px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .sender__text {
-    font-size: 15px;
-    line-height: 21 / 15 * 100%;
-    min-width: 100px;
-    margin: 10px;
-    background: #D4EBFB;
-    min-height: 34px;
-    border-radius: 4.23704px 4.23704px;
-    display: inline-block;
-    padding: 10px 10px 10px 10px;
-    word-break: break-all;
-    overflow-wrap: break-word;
-    color: #242424;
+  font-size: 15px;
+  line-height: 21 / 15 * 100%;
+  min-width: 100px;
+  margin: 10px;
+  background: #d4ebfb;
+  min-height: 34px;
+  border-radius: 4.23704px 4.23704px;
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  color: #242424;
 }
 
 .sender__name {
-    line-height: 5px;
-    padding: 10px 10px 0px 10px;
-    color: #FAFAFA;
+  line-height: 5px;
+  padding: 10px 10px 0px 10px;
+  color: #fafafa;
 }

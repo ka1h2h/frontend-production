@@ -30,7 +30,7 @@ const App: React.FC = () => {
       </div>
       <div className={welcomeBanner ? "asq-your-name" : "completed"}>
         <div className="asq-your-name__form">
-          <div className="asq-your-name__form__container">
+          <div className="asq-your-name-form__container">
             <div className="asq-your-name__name">Как Вас зовут?</div>
             <input
               value={nameText}
